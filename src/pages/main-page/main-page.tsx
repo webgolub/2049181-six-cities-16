@@ -1,9 +1,13 @@
-import { MainPageSettings } from '../../components/const';
 import PlaceCard from '../../components/place-card/place-card';
 
-function MainPage() {
+type MainPageProps = {
+    mainPageCardsCount: number;
+}
+
+function MainPage({mainPageCardsCount}: MainPageProps) {
+
   const placeCards = Array
-    .from({length: MainPageSettings.CardsCount})
+    .from({length: mainPageCardsCount})
     .map(() => <PlaceCard key={Math.random()} />);
 
   return (
