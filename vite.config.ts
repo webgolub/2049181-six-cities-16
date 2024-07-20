@@ -12,4 +12,7 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/setupTests.ts'],
   },
+  server: {
+    host: '192.168.1.120'
+  }
 });
