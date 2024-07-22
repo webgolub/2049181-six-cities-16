@@ -2,4 +2,15 @@ const MainPageSettings = {
   CardsCount: 5
 };
 
-export {MainPageSettings};
+enum AppRoute {
+  Main = '/',
+  Login = '/login',
+  Favorites = '/favorites',
+  Offer = '/offer',
+  NotFound = '*'
+}
+
+export {
+  MainPageSettings,
+  AppRoute
+};
