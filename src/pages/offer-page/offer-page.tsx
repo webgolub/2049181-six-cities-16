@@ -1,4 +1,4 @@
-function Offer() {
+function OfferPage() {
 
   return(
     <div className="page">
@@ -337,4 +337,4 @@ function Offer() {
   );
 }
 
-export default Offer;
+export default OfferPage;
