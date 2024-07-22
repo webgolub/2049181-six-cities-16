@@ -2,6 +2,12 @@ const MainPageSettings = {
   CardsCount: 5
 };
 
+enum AuthorizationStatus {
+  Auth = 'AUTH',
+  NoAuth = 'NO_AUTH',
+  Unknown = 'UNKNOWN'
+}
+
 enum AppRoute {
   Main = '/',
   Login = '/login',
@@ -12,5 +18,6 @@ enum AppRoute {
 
 export {
   MainPageSettings,
+  AuthorizationStatus,
   AppRoute
 };
