@@ -6,6 +6,7 @@ import FavoritesPage from '../../pages/favorites-page/favorites-page';
 import { AppRoute, AuthorizationStatus } from '../const';
 import { HelmetProvider } from 'react-helmet-async';
 import PrivateRoute from '../private-route/private-route';
+import OfferPage from '../../pages/offer-page/offer-page';
 
 type AppProps = {
   mainPageCardsCount: number;
@@ -24,6 +25,10 @@ function App({mainPageCardsCount}: AppProps) {
           <Route
             path={AppRoute.Login}
             element={<LoginPage />}
+          />
+          <Route
+            path={AppRoute.Offer}
+            element={<OfferPage />}
           />
           <Route
             path={AppRoute.Favorites}
