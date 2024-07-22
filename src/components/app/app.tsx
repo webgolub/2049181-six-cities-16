@@ -4,6 +4,7 @@ import LoginPage from '../../pages/login-page/login-page';
 import NotFoundPage from '../../pages/not-found-page/not-found-page';
 import FavoritesPage from '../../pages/favorites-page/favorites-page';
 import { AppRoute } from '../const';
+import { HelmetProvider } from 'react-helmet-async';
 
 type AppProps = {
   mainPageCardsCount: number;
@@ -12,14 +13,16 @@ type AppProps = {
 function App({mainPageCardsCount}: AppProps) {
 
   return(
-    <BrowserRouter>
-      <Routes>
-        <Route path={AppRoute.Main} element={<MainPage mainPageCardsCount={mainPageCardsCount}/>} />
-        <Route path={AppRoute.Login} element={<LoginPage />} />
-        <Route path={AppRoute.Favorites} element={<FavoritesPage />} />
-        <Route path={AppRoute.NotFound} element={<NotFoundPage />} />
-      </Routes>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path={AppRoute.Main} element={<MainPage mainPageCardsCount={mainPageCardsCount}/>} />
+          <Route path={AppRoute.Login} element={<LoginPage />} />
+          <Route path={AppRoute.Favorites} element={<FavoritesPage />} />
+          <Route path={AppRoute.NotFound} element={<NotFoundPage />} />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
