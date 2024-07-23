@@ -12,7 +12,7 @@ type AppProps = {
   mainPageCardsCount: number;
 }
 
-function App({mainPageCardsCount}: AppProps) {
+function App({mainPageCardsCount}: AppProps): JSX.Element {
 
   return(
     <HelmetProvider>

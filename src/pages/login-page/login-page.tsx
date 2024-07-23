@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-function LoginPage() {
+function LoginPage(): JSX.Element {
 
   return(
     <div className="page page--gray page--login">

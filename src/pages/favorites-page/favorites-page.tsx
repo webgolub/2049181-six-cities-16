@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-function FavoritesPage() {
+function FavoritesPage(): JSX.Element {
 
   return(
     <div className="page">
