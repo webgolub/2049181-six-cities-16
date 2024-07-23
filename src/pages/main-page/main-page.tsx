@@ -3,12 +3,13 @@ import Header from '../../components/header/header';
 import CitiesTabs from '../../components/cities-tabs/cities-tabs';
 import CitiesPlacesSection from '../../components/cities-places-section/cities-places-section';
 import CitiesMap from '../../components/cities-map/cities-map';
+import { City } from '../../components/const';
 
 type MainPageProps = {
-    citiesCardsCount: number;
+    maxPlaceCards: number;
 }
 
-function MainPage({citiesCardsCount}: MainPageProps): JSX.Element {
+function MainPage({maxPlaceCards}: MainPageProps): JSX.Element {
 
   return (
     <div className="page page--gray page--main">
@@ -21,7 +22,11 @@ function MainPage({citiesCardsCount}: MainPageProps): JSX.Element {
         <CitiesTabs />
         <div className="cities">
           <div className="cities__places-container container">
-            <CitiesPlacesSection citiesCardsCount={citiesCardsCount} />
+            <CitiesPlacesSection
+              maxPlaceCards={maxPlaceCards}
+              placesCount={404}
+              city={City.Amsterdam}
+            />
             <CitiesMap />
           </div>
         </div>

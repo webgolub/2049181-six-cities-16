@@ -9,10 +9,10 @@ import PrivateRoute from '../private-route/private-route';
 import OfferPage from '../../pages/offer-page/offer-page';
 
 type AppProps = {
-  citiesCardsCount: number;
+  maxPlaceCards: number;
 }
 
-function App({citiesCardsCount}: AppProps): JSX.Element {
+function App({maxPlaceCards}: AppProps): JSX.Element {
 
   return(
     <HelmetProvider>
@@ -20,7 +20,7 @@ function App({citiesCardsCount}: AppProps): JSX.Element {
         <Routes>
           <Route
             path={AppRoute.Main}
-            element={<MainPage citiesCardsCount={citiesCardsCount}/>}
+            element={<MainPage maxPlaceCards={maxPlaceCards}/>}
           />
           <Route
             path={AppRoute.Login}

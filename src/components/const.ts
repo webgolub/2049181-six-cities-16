@@ -1,6 +1,4 @@
-const MainPageSettings = {
-  CardsCount: 5
-};
+const MAX_PLACE_CARDS = 5;
 
 enum AuthorizationStatus {
   Auth = 'AUTH',
@@ -16,8 +14,26 @@ enum AppRoute {
   NotFound = '*'
 }
 
+enum City {
+  Paris = 'Paris',
+  Cologne = 'Cologne',
+  Brussels = 'Brussels',
+  Amsterdam = 'Amsterdam',
+  Hamburg = 'Hamburg',
+  Dusseldorf = 'Dusseldorf'
+}
+
+enum SortType {
+  Popular = 'Popular',
+  PriceLowToHigh = 'Price: low to high',
+  PriceHighToLow = 'Price: high to low',
+  TopRated = 'Top rated first'
+}
+
 export {
-  MainPageSettings,
+  MAX_PLACE_CARDS,
   AuthorizationStatus,
+  City,
+  SortType,
   AppRoute
 };

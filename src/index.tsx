@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
-import { MainPageSettings } from './components/const';
+import { MAX_PLACE_CARDS } from './components/const';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -9,6 +9,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App citiesCardsCount = {MainPageSettings.CardsCount} />
+    <App maxPlaceCards = {MAX_PLACE_CARDS} />
   </React.StrictMode>
 );
